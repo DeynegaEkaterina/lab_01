@@ -39,11 +39,11 @@ find_package(nlohmann_json 3.2.0 CONFIG REQUIRED)
 add_library(parser STATIC
   # enum your files and delete this comment
   ${CMAKE_CURRENT_SOURCE_DIR}/sources/source.cpp
-)
+        include/JsonAny.hpp)
 add_executable(tests
   # TODO: enum your files and delete this comment
   ${CMAKE_CURRENT_SOURCE_DIR}/tests/test.cpp
-)
+        include/JsonAny.hpp)
 
 target_include_directories(parser
         PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include
