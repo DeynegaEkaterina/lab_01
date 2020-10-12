@@ -1,40 +1,27 @@
 //
 // Created by ekaterina on 08.10.2020.
 //
+// Copyright 2020 Your Name <ekaterina>
 
 #ifndef PARSER_JSONANY_HPP
 #define PARSER_JSONANY_HPP
-
-
 #include <nlohmann/json.hpp>
 #include <any>
 #include <string>
 #include <vector>
-
-namespace nlohmann {
+namespace nlohmann { //пространство имен
 template <>
-struct adl_serializer<std::any> {
-  static void to_json(json& j, const std::any& any_var) {
-    if (any_var.type() == typeid(std::string)) {
-      j = std::any_cast<std::string>(any_var);
-    } else if (any_var.type() == typeid(int)) {
-      j = std::any_cast<int>(any_var);
-    } else if (any_var.type() == typeid(float)) {
-      j = std::any_cast<float>(any_var);
-    } else if (any_var.type() == typeid(std::vector<std::string>)) {
-      j = std::any_cast<std::vector<std::string>>(any_var);
-    } else {
-      j = nullptr;
-    }
-  }
-
+struct adl_serializer<std::any> { //специализация шаблона
   static void from_json(const json& j, std::any& any_var) {
+    //Эта функция обычно вызывается get()функцией класса
+    // basic_json (либо явным образом, либо с помощью
+    // операторов преобразования).
     if (j.is_null()) {
       any_var = nullptr;
     } else if (j.is_number_integer()) {
       any_var = j.get<int>();
     } else if (j.is_number_float()) {
-      any_var = j.get<float>();
+      any_var = j.get<double>();
     } else if (j.is_string()) {
       any_var = j.get<std::string>();
     } else if (j.is_array()) {
@@ -47,6 +34,7 @@ struct adl_serializer<std::any> {
     }
   }
 };
+
 }// namespace nlohmann
 
 #endif  // PARSER_JSONANY_HPP
