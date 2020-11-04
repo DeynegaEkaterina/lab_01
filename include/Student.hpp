@@ -3,8 +3,8 @@
 //
 // Copyright 2020 ekaterina
 
-#ifndef INCLUDE_STUDENT_HPP
-#define INCLUDE_STUDENT_HPP
+#ifndef INCLUDE_STUDENT_HPP_
+#define INCLUDE_STUDENT_HPP_
 
 #include "JsonAny.hpp"
 #include <string>
@@ -41,4 +41,4 @@ class Student {
   std::any debt;
 };
 
-#endif  // INCLUDE_STUDENT_HPP
+#endif  // INCLUDE_STUDENT_HPP_
