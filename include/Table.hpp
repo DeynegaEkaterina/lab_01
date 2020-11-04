@@ -3,8 +3,8 @@
 //
 // Copyright 2020 Your Name <ekaterina>
 
-#ifndef INCLUDE_HEADER_HPP_
-#define INCLUDE_HEADER_HPP_
+#ifndef INCLUDE_TABLE_HPP_
+#define INCLUDE_TABLE_HPP_
 
 #include <vector>
 #include <string>
@@ -26,4 +26,4 @@ class Table {
   std::vector<Student> m_students;
   std::vector<size_t> m_w;
 };
-#endif // INCLUDE_HEADER_HPP_
+#endif // INCLUDE_TABLE_HPP_
