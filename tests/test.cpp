@@ -68,7 +68,6 @@ R"(| name          | group  | avg   | debt    |
 )";
 
   EXPECT_EQ(str.str(), ref_string);
-
 }
 
 TEST(Table, Error_name_file) {
