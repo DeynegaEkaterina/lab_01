@@ -3,8 +3,8 @@
 //
 // Copyright 2020 Your Name <ekaterina>
 
-#ifndef INCLUDE_JSONANY_HPP
-#define INCLUDE_JSONANY_HPP
+#ifndef INCLUDE_JSONANY_HPP_
+#define INCLUDE_JSONANY_HPP_
 #include <nlohmann/json.hpp>
 #include <any>
 #include <string>
@@ -37,4 +37,4 @@ struct adl_serializer<std::any> { //специализация шаблона
 
 }// namespace nlohmann
 
-#endif  // INCLUDE_JSONANY_HPP
+#endif  // INCLUDE_JSONANY_HPP_
