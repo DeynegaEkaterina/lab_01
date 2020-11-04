@@ -1,0 +1,12 @@
+{
+  "items": [{
+      "name": "Sidorov Ivan",
+      "group": 31,
+      "avg": 4,
+      "debt": "C++"
+  }
+  ],
+  "_mta": {
+    "count": 1
+  }
+}

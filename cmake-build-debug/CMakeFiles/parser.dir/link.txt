@@ -1,0 +1,2 @@
+/usr/bin/ar qc libparserd.a  CMakeFiles/parser.dir/sources/Student.cpp.o CMakeFiles/parser.dir/sources/Table.cpp.o
+/usr/bin/ranlib libparserd.a
